@@ -22,7 +22,10 @@ const INSTRUCTIONS: Record<string, string[][]> = {
             OUT: [["Num"], ["Reg","Num","String"]],
             GIP: [["Reg"]],
             HLT: [],
-            BRG: [["Reg", "Num"], ["Reg", "Num"], ["Label", "Num"]]
+            BRG: [["Reg", "Num"], ["Reg", "Num"], ["Label", "Num"]],
+            BNG: [["Reg", "Num"], ["Reg", "Num"], ["Label", "Num"]],
+            BRL: [["Reg", "Num"], ["Reg", "Num"], ["Label", "Num"]],
+            BNL: [["Reg", "Num"], ["Reg", "Num"], ["Label", "Num"]]
         }
 
 export function activate(context: vscode.ExtensionContext) {
