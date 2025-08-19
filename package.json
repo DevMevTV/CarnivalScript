@@ -44,7 +44,7 @@
     "type": "git",
     "url": "https://github.com/DevMevTV/CarnivalScript.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/vscode": "^1.103.0"
   }
 }
