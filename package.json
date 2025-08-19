@@ -3,9 +3,11 @@
   "displayName": "CarnivalScript",
   "description": "",
   "version": "0.0.1",
+  "icon": "media/carnival.png",
   "engines": {
     "vscode": "^1.103.0"
   },
+  "publisher": "DevMevTV",
   "main": "./out/extension.js",
   "categories": [
     "Programming Languages"
@@ -21,9 +23,14 @@
           "carnival"
         ],
         "extensions": [
-          ".cnvl"
+          ".cnvl",
+          ".carnival"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "dark": "./media/carnival.png",
+          "light": "./media/carnival.png"
+        }
       }
     ],
     "grammars": [
@@ -33,5 +40,9 @@
         "path": "./syntaxes/carnival.tmLanguage.json"
       }
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevMevTV/CarnivalScript.git"
+}
 }
