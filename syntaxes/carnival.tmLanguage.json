@@ -1,0 +1,65 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Carnival Script",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#meta" },
+		{ "include": "#strings" },
+		{ "include": "#numbers" },
+		{ "include": "#labels" },
+		{ "include": "#comments" },
+		{ "include": "#registers" }
+	],
+	"repository": {
+		"keywords": {
+			"name": "keyword.control.carnival",
+			"match": "(?i)\\b(HLT|MOV|LOD|STR|PSH|POP|ADD|SUB|MOD|XOR|AND|NOT|OR|JMP|CAL|BRZ|BNZ|IN|OUT|GIP|RET)\\b"
+		},
+		"strings": {
+            "begin": "'",
+            "end": "'",
+            "name": "string.quoted.single.carnival",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.carnival",
+                    "match": "\\\\."
+                }
+            ]
+        },
+		"meta": {
+    		"patterns": [
+    		    {
+    		        "begin": "\\bmeta\\b",
+    		        "beginCaptures": {
+    		            "0": { "name": "keyword.other.meta.carnival" }
+    		        },
+    		        "end": "$",
+    		        "patterns": [
+    		            {
+    		                "match": "\\.(name|version|author)",
+    		                "name": "variable.other.meta-key.carnival"
+    		            },
+    		            { "include": "#strings" }
+    		        ]
+    		    }
+    		]
+		},
+		"numbers": {
+		    "name": "constant.numeric.integer.carnival",
+		    "match": "\\b\\d+\\b"
+		},
+		"labels": {
+		    "name": "entity.name.type.carnival",
+		    "match": "\\.[A-Za-z_][A-Za-z0-9_]*"
+		},
+		"comments": {
+		    "name": "comment.line.carnival",
+		    "match": "^#.*$"
+		},
+		"registers": {
+			"name": "entity.name.function.carnival",
+            "match": "\\b(r(?:1[0-5]|[0-9]))\\b"
+		}
+	},
+	"scopeName": "source.cnvl"
+}

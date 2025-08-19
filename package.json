@@ -1,0 +1,37 @@
+{
+  "name": "carnivalscript",
+  "displayName": "CarnivalScript",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "main": "./out/extension.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "carnival",
+        "aliases": [
+          "Carnival Script",
+          "carnival"
+        ],
+        "extensions": [
+          ".cnvl"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "carnival",
+        "scopeName": "source.cnvl",
+        "path": "./syntaxes/carnival.tmLanguage.json"
+      }
+    ]
+  }
+}
