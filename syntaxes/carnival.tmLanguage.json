@@ -13,7 +13,7 @@
 	"repository": {
 		"keywords": {
 			"name": "keyword.control.carnival",
-			"match": "(?i)\\b(HLT|MOV|LOD|STR|PSH|POP|ADD|SUB|MOD|XOR|AND|NOT|OR|JMP|CAL|BRZ|BNZ|IN|OUT|GIP|RET)\\b"
+			"match": "(?i)\\b(HLT|MOV|LOD|STR|PSH|POP|ADD|SUB|MOD|XOR|AND|NOT|OR|JMP|CAL|BRZ|BNZ|IN|OUT|GIP|RET|BRG|BNG|BRL|BNL)\\b"
 		},
 		"strings": {
             "begin": "'",

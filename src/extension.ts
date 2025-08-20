@@ -74,7 +74,8 @@ export function activate(context: vscode.ExtensionContext) {
             const line = lines[lineNum].trim()
             if (!line) continue
 
-            const parts = line.split(/\s+/)
+            const parts = line.match(/'[^']*'|\S+/g)
+            if (parts == undefined || parts.length === 0) continue
             const instruction = parts[0].toUpperCase()
             const args = parts.slice(1)
 
